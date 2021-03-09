@@ -42,9 +42,12 @@ button {
 }
 div#tabArea > div#tabContent1 {
     padding: 20px 10px;
-    padding-top: 23px;
     border: 1px solid #aaa;
 
     display: inline-block;
 }
 /* singleTab e */
+
+img {
+    vertical-align: middle;
+}
