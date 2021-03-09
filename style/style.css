@@ -12,19 +12,23 @@ a:visited     {color: #333;}
 a:hover       {color: #444;}
 a:active      {color: #555;}
 ul            {list-style: none;}
+
+
 /* Reset e */
 
 
 div.wrap {
-    width: 400px;
+    width: 450px;
     padding: 20px;
     border: 1px solid #000;
     margin: 0 auto;
 }
 
-/* singleTab s */
+/* multiTab s */
+
+    /* 멀티탭 공통 작업 시작 */
 div#tabArea {                /* 탭 버튼과 탭 내용을 둘러싼 외부*/
-    width: 330px;
+    width: 400px;
     padding: 10px;
     margin: 10px;
     /*border: 2px solid #08f;*/
@@ -35,19 +39,65 @@ button {
     padding: 4px 10px;
     border: 1px solid #aaa;
     border-bottom: none;
-    margin-left: 25px;
+    outline: none;
 
     position: relative;
     top: 1px;
 }
-div#tabArea > div#tabContent1 {
-    padding: 20px 10px;
+button:first-child {
+    margin-left: 25px;
+}
+div#tabArea > div {
+    padding: 24px 10px;
     border: 1px solid #aaa;
 
     display: inline-block;
 }
-/* singleTab e */
 
+    /* 멀티탭 공통 작업 끝 */
+
+    /* 공지사항 영역 시작 */
+/*#tabArea #tabContent1 #bbsNotice span {
+    border: 1px solid #000;
+}*/
+#tabArea #tabContent1 {
+    padding: 6px 26px 6px 16px;
+}
+#tabArea #tabContent1 #bbsNotice {
+/*
+    border: 1px solid #000;
+*/
+}
+#tabArea #tabContent1 #bbsNotice li {
+    line-height: 32px;
+}
+#tabArea #tabContent1 #bbsNotice span:first-child {
+    width: 230px;
+    display: inline-block;
+}
+
+
+    /* 공지사항 영역 끝 */
+    /* 갤러리 영역 시작 */
 img {
     vertical-align: middle;
 }
+
+    /* 갤러리 영역 끝 */
+
+    /* 멀티탭 클릭 기능 구현 */
+button:nth-child(2) {
+    border: none;
+    left: -6px;
+    top: 0;
+}
+
+#tabArea #tabContent2 {
+    display: none;
+}
+    /* 멀티탭 클릭 기능 구현 끝 */
+
+
+/* multiTab e */
+
+
